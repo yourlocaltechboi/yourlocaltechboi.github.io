@@ -1,0 +1,66 @@
+body{
+  width: 100vw;
+  height: auto;
+  background: rgb(0,0,0);
+  font-size: 0;
+  margin: 0;
+}
+#bgImage{
+  z-index: 1;
+  width: 80vw;
+  height: 80vh;
+  margin-top: 10vh;
+  margin-left: 10vw;
+  background: url(&quot;/assets/img/DSC_0013.jpg&quot;) center / cover no-repeat, rgba(44,44,44,0);
+  filter: blur(17px) brightness(49%) grayscale(100%) hue-rotate(360deg) sepia(29%);
+}
+#pageContent{
+  height: 45vh;
+  margin-top: 17.5vh;
+}
+#name{
+  text-align: center;
+  color: rgb(255,255,255);
+  padding-top: 2vh;
+  font-size: 60px;
+  font-family: 'Amatic SC';
+  font-weight: bold;
+  font-style: normal;
+}
+.splitter{
+  color: rgb(255,255,255);
+  border-style: solid;
+  border-bottom-width: 3px;
+  width: 10vw;
+  margin-left: 35vw;
+  margin-top: -15px;
+}
+.social-icons {
+  color: #313437;
+  background-color: #fff;
+  text-align: center;
+  padding: 70px 0;
+  background: rgba(255,255,255,0);
+  padding: 0;
+  padding-top: 2.5vh;
+}
+
+@media (max-width:767px) {
+  .social-icons {
+    padding: 50px 0;
+  }
+}
+
+.social-icons i {
+  font-size: 32px;
+  display: inline-block;
+  color: #757980;
+  margin: 0 10px;
+  width: 60px;
+  height: 60px;
+  border: 0px solid #c8ced7;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 60px;
+}
+
