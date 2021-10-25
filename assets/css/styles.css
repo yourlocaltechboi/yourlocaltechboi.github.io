@@ -87,3 +87,10 @@ body{
   line-height: 60px;
 }
 
+@media (max-width: 400px){
+  .social-icons{
+    width: 100vh;
+    border-radius: 0;
+    position: absolute;
+  }
+}
