@@ -25,36 +25,47 @@ body{
   border-width: 3px;
   border-style: none;
 }
+@media(max-width: 1200px;){
+  #contentHolder{
+    width: 90vh;
+  }
+  .social-icons{
+    width: 30vw;
+    margin-left: 25vw;
+  }
+}
 #pageContent{
   height: 45vh;
-  margin-top: 17.5vh;
+  margin-top: 12.5vh;
 }
 #name{
   text-align: center;
+  width: 50vw;
   color: rgb(255,255,255);
-  padding-top: 2vh;
-  padding-bottom: 2vh;
+  padding-top: 5vh;
+  padding-bottom: 10vh;
+  margin-left: 15vw;
   font-size: 60px;
   font-family: 'Amatic SC';
   font-weight: bold;
   font-style: normal;
+  border: 1px solid white;
+  border-radius: 25px;
 }
-.splitter{
-  color: rgb(255,255,255);
-  border-style: solid;
-  border-bottom-width: 3px;
-  width: 10vw;
-  margin-left: 35vw;
-  margin-top: -15px;
-}
+
 .social-icons {
   color: #313437;
   background-color: #fff;
   text-align: center;
   padding: 70px 0;
-  background: rgba(255,255,255,0);
+  background: rgba(255,255,255,1);
   padding: 0;
-  padding-top: 2.5vh;
+  padding-top: 2.5px;
+  margin-left: 30vw;
+  border: 1px solid white;
+  border-radius: 25px;
+  width: 20vw;
+  margin-top: -11.5vh;
 }
 
 @media (max-width:767px) {
