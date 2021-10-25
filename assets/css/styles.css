@@ -7,12 +7,23 @@ body{
 }
 #bgImage{
   z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background: url('/assets/img/DSC_0013.jpg') center / cover no-repeat, rgba(44,44,44,0);
+  filter: blur(17px) brightness(49%) grayscale(100%) hue-rotate(360deg) sepia(29%);
+}
+#contentHolder{
+  z-index: 2;
+  overflow: hidden;
   width: 80vw;
   height: 80vh;
-  margin-top: 10vh;
+  margin-top: -80vh;
   margin-left: 10vw;
-  background: url(&quot;/assets/img/DSC_0013.jpg&quot;) center / cover no-repeat, rgba(44,44,44,0);
-  filter: blur(17px) brightness(49%) grayscale(100%) hue-rotate(360deg) sepia(29%);
+  background: rgba(25,25,25,0);
+  filter: blur(0px) grayscale(100%) hue-rotate(360deg) sepia(29%);
+  border-width: 3px;
+  border-style: none;
 }
 #pageContent{
   height: 45vh;
@@ -22,6 +33,7 @@ body{
   text-align: center;
   color: rgb(255,255,255);
   padding-top: 2vh;
+  padding-bottom: 2vh;
   font-size: 60px;
   font-family: 'Amatic SC';
   font-weight: bold;
