@@ -5,8 +5,95 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            color: white;
+            height: auto;
+            font-family: -apple-system;
+            font-size: 24pt;
+        }
+        h1{
+            margin-top: -60px;
+        }
+    </style>
 </head>
 <body>
-    <h1 style="color: white;">Hello World!</h1>
+    <h1 style="margin-top: 0; font-size: 60pt;"><span id="time">9:41</span></h1>
+    <h1 id="date-day" style="color: rgb(180, 180, 180)">MONDAY</h1>
+    <h1 style="color: rgb(180,230,180);"><span id="month">JAN</span> <span id="date-num">1</span></h1>
+    <script>
+        const dateDay = document.querySelector('#date-day')
+        const dateMonth = document.querySelector('#month')
+        const dateNum = document.querySelector('#date-num')
+        const dateTime = document.querySelector('#time')
+
+        const date = new Date()
+        let dateDayValue = date.getDay()
+        let dateMonthValue = date.getMonth()
+        let dateNumValue = date.getDate()
+        dateTime.innerText = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+
+        dateNum.innerText = dateNumValue
+
+        if (dateDayValue == 0){
+            dateDay.innerHTML = 'SUNDAY'
+        }
+        if (dateDayValue == 1){
+            dateDay.innerHTML = 'MONDAY'
+        }
+        if (dateDayValue == 2){
+            dateDay.innerHTML = 'TUESDAY'
+        }
+        if (dateDayValue == 3){
+            dateDay.innerHTML = 'WEDNESDAY'
+        }
+        if (dateDayValue == 4){
+            dateDay.innerHTML = 'THURSDAY'
+        }
+        if (dateDayValue == 5){
+            dateDay.innerHTML = 'FRIDAY'
+        }
+        if (dateDayValue == 6){
+            dateDay.innerHTML = 'SATURDAY'
+        }
+
+        if (dateMonthValue == 0){
+            dateMonth.innerHTML = 'JAN'
+        }
+        if (dateMonthValue == 1){
+            dateMonth.innerHTML = 'FEB'
+        }
+        if (dateMonthValue == 2){
+            dateMonth.innerHTML = 'MAR'
+        }
+        if (dateMonthValue == 3){
+            dateMonth.innerHTML = 'APR'
+        }
+        if (dateMonthValue == 4){
+            dateMonth.innerHTML = 'MAY'
+        }
+        if (dateMonthValue == 5){
+            dateMonth.innerHTML = 'JUN'
+        }
+        if (dateMonthValue == 6){
+            dateMonth.innerHTML = 'JUL'
+        }
+        if (dateMonthValue == 7){
+            dateMonth.innerHTML = 'AUG'
+        }
+        if (dateMonthValue == 8){
+            dateMonth.innerHTML = 'SEP'
+        }
+        if (dateMonthValue == 9){
+            dateMonth.innerHTML = 'OCT'
+        }
+        if (dateMonthValue == 10){
+            dateMonth.innerHTML = 'NOV'
+        }
+        if (dateMonthValue == 11){
+            dateMonth.innerHTML = 'DEC'
+        }
+
+    </script>
 </body>
 </html>
