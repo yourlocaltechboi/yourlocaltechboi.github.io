@@ -1,0 +1,87 @@
+body{
+  width: 100vw;
+  height: auto;
+  background: rgb(0,0,0);
+  font-size: 0;
+  margin: 0;
+}
+#bgImage{
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background: url('/assets/img/DSC_0013.jpg') center / cover no-repeat, rgba(44,44,44,0);
+  filter: blur(17px) brightness(49%) grayscale(100%) hue-rotate(360deg) sepia(29%);
+}
+#contentHolder{
+  z-index: 2;
+  overflow: hidden;
+  width: 80vw;
+  height: 80vh;
+  margin-top: -80vh;
+  margin-left: 10vw;
+  background: rgba(25,25,25,0);
+  filter: blur(0px) grayscale(100%) hue-rotate(360deg) sepia(29%);
+  border-width: 3px;
+  border-style: none;
+}
+@media(max-width: 1200px){
+  #contentHolder{
+    width: 90vh;
+  }
+  .social-icons{
+    width: 30vw;
+    margin-left: 25vw;
+  }
+}
+#pageContent{
+  height: 45vh;
+  margin-top: 12.5vh;
+}
+#name{
+  text-align: center;
+  width: 50vw;
+  color: rgb(255,255,255);
+  padding-top: 5vh;
+  padding-bottom: 10vh;
+  margin-left: 15vw;
+  font-size: 60px;
+  font-family: 'Amatic SC';
+  font-weight: bold;
+  font-style: normal;
+  border: 1px solid white;
+  border-radius: 25px;
+}
+
+.social-icons {
+  color: #313437;
+  background-color: #fff;
+  text-align: center;
+  padding: 0px 0px;
+  background: rgba(255,255,255,1);
+  padding-top: 2.5px;
+  margin-left: 30vw;
+  border: 1px solid white;
+  border-radius: 25px;
+  width: 20vw;
+  margin-top: -11.5vh;
+}
+
+.social-icons i {
+  font-size: 32px;
+  display: inline-block;
+  color: #757980;
+  margin: 0;
+  width: 60px;
+  height: 60px;
+  border: 0px solid #c8ced7;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 60px;
+}
+
+@media (max-width: 590px){
+  #contentHolder{
+    margin-top: -90vh;
+  }
+}
