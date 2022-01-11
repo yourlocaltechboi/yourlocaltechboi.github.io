@@ -94,16 +94,32 @@ body{
 }
 @media (max-width: 700px){
     #nav{
-        width: 100%;
+        width: 100vw;
         background-color: rgba(255,255,255,0.6);
         color: #333;
+        align-content: initial;
+        justify-content: initial;
+        margin: 0;
+        padding: 0;
     }
     #contentBlock{
         display: none;
+        margin: 0;
+        padding: 0;
     }
     #imageBlock{
         z-index: -1;
+        margin: 0;
         margin-left: -100vw;
-        width: 100%;
+        width: 100vw;
+        padding: 0;
+    }
+    .navItem{
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+    .navItem p i{
+        padding-left: 10px;
     }
 }
