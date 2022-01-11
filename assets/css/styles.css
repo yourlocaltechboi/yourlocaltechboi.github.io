@@ -30,6 +30,7 @@ body{
     width: 100%;
     height: 50px;
     padding-left: 10px;
+    user-select: none;
 }
 .navItem p{
     height: 20px;
@@ -39,7 +40,7 @@ body{
     color: white;
     background-color: black;
 }
-#contentBlock{
+#imageBlock{
     z-index: 1;
     width: 80vw;
     height: 100vh;
@@ -60,4 +61,21 @@ body{
 }
 .smalltext p{
     margin-top: 7.5px;
+}
+#contentBlock{
+    z-index: 3;
+    margin-left: -80vw;
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+    flex-direction: column;
+}
+#contentBlock h1{
+    font-size: 40px;
+}
+#contentBlock p{
+    font-size: 16px;
 }

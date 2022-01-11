@@ -12,30 +12,39 @@
         <div id="nav">
             <h1 style="margin-left: 10px;"><b><u>ANDEN WIESELER</u></b></h1>
             <h3 style="margin-left: 10px;"><b><u>MY STUFF:</u></b></h3>
-            <div class="navItem">
+            <div class="navItem" onclick="setPage('aboutMe')">
                 <p><i class="fas fa-book"></i> About Me</p>
             </div>
-            <div class="navItem">
+            <div class="navItem" onclick="setPage('github')">
                 <p><i class="fab fa-github"></i> GitHub</p>
             </div>
-            <div class="navItem">
+            <div class="navItem" onclick="setPage('twitter')">
                 <p><i class="fab fa-twitter"></i> Twitter</p>
             </div>
-            <div class="navItem">
+            <div class="navItem" onclick="setPage('zedtekFacebook')">
                 <p><i class="fab fa-facebook"></i> ZedTek Facebook</p>
             </div>
             <h3 style="margin-left: 10px;"><b><u>MY PROJECTS:</u></b></h3>
-            <div class="navItem smalltext">
+            <div class="navItem smalltext" onclick="setPage('jbWalkthrough')">
                 <p><i class="fas fa-bars"></i> Jailbreak Walkthrough</p>
             </div>
-            <div class="navItem smalltext">
+            <div class="navItem smalltext" onclick="setPage('toggle')">
                 <p><i class="fas fa-bars"></i> Toggle Bot Framework</p>
             </div>
+            <div class="navItem smalltext" onclick="setPage('portfolio')">
+                <p><i class="fas fa-bars"></i> Freelance Graphic/Web Design</p>
+            </div>
+            <div class="navItem smalltext" onclick="setPage('photos')">
+                <p><i class="fas fa-bars"></i> Photography</p>
+            </div>
         </div>
+        <div id="imageBlock"></div>
         <div id="contentBlock">
-            <div id="name"><p>Anden Wieseler</p></div>
+            <h1>ANDEN WIESELER</h1>
+            <p><i class="fas fa-arrow-left"></i> Click a link in the sidebar!</p>
         </div>
     </div>
     <script src="https://kit.fontawesome.com/cd32c1b6c9.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
 </body>
 </html>
