@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mac Time/Date Widget</title>
     <style>
         body{
             color: white;
@@ -16,15 +16,11 @@
             margin-top: -60px;
         }
     </style>
-    <script src="https://raw.githubusercontent.com/andrewplummer/Sugar/2.0.4/dist/sugar.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="weather.js"></script>
 </head>
 <body>
     <h1 style="margin-top: 0; font-size: 60pt;"><span id="time">9:41</span></h1>
     <h1 id="date-day" style="color: rgb(180, 180, 180)">MONDAY</h1>
     <h1 style="color: rgb(90,90,105);"><span id="month">JAN</span> <span id="date-num">1</span></h1>
-    <h4 style="color: rgb(180, 180, 180); margin-top: -30px;" id="weatherStatement">Currently: conditions and 75</h3>
     <script>
         const dateDay = document.querySelector('#date-day')
         const dateMonth = document.querySelector('#month')
@@ -38,16 +34,6 @@
         let dateMonthValue = date.getMonth()
         let dateNumValue = date.getDate()
         dateTime.innerText = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-        
-        var apiKey = '0b8abb3b936965c62333443f3d5d710e';
-        Weather.setApiKey( apiKey );
-        var tempApiKey = Weather.getApiKey();
-
-
-        // Get current weather for a given city
-        Weather.getCurrent('Hartington', function(current){
-            document.querySelector('#weatherStatement').innerHTML = `<p>${[`${current.temperature()}°`, 'and', current.conditions()].join( ' ' )}</p>`.toUpperCase()
-        });
 
         dateNum.innerText = dateNumValue
 
