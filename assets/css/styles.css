@@ -6,14 +6,17 @@ body{
     background-color: black;
     color: white;
 }
-#page{
+#mobilePage{
+    display: none;
+}
+#deskPage{
     width: 100vw;
     height: 100vh;
     margin: 0;
     padding: 0;
     display: flex;
 }
-#nav{
+#deskNav{
     width: 20%;
     height: 100%;
     background-color: white;
@@ -26,26 +29,26 @@ body{
     font-family: monospace;
     font-size: 20px;
 }
-.navItem{
+.deskNavItem{
     width: 100%;
     height: 50px;
     padding-left: 10px;
     user-select: none;
 }
-.navItem p{
+.deskNavItem p{
     height: 20px;
     margin-top: 15px;
 }
-.navItem:hover{
+.deskNavItem:hover{
     color: white;
     background-color: black;
 }
-#imageBlock{
+#deskImageBlock{
     z-index: 1;
     width: 80vw;
     height: 100vh;
     margin: 0;
-    background: url('/assets/img/DSC_0013.jpg') center / cover no-repeat, rgba(44,44,44,0);
+    background: url('/assets/img/DSC_0013.jpg') center / cover no-repeat, rgba(0,0,0,1);
     filter: blur(17px) brightness(49%) grayscale(100%) hue-rotate(360deg) sepia(29%);
 }
 #name{
@@ -62,7 +65,7 @@ body{
 .smalltext p{
     margin-top: 7.5px;
 }
-#contentBlock{
+#deskContentBlock{
     z-index: 3;
     margin-left: -80vw;
     width: 80vw;
@@ -73,53 +76,121 @@ body{
     font-family: monospace;
     flex-direction: column;
 }
-#contentBlock h1{
+#deskContentBlock h1{
     font-size: 40px;
 }
-#contentBlock p{
+#deskContentBlock p{
     font-size: 16px;
 }
 
 @media (max-width: 1400px) {
-    #nav{
+    #deskNav{
         width: 30%;
     }
-    #contentBlock{
+    #deskContentBlock{
         width: 70%;
         margin-left: -70vw;
     }
-    #imageBlock{
+    #deskImageBlock{
         width: 70%;
     }
 }
+@media (max-width: 1000px) {
+    #deskNav{
+        width: 40%;
+    }
+    #deskContentBlock{
+        width: 60%;
+        margin-left: -60vw;
+    }
+    #deskImageBlock{
+        width: 60%;
+    }
+}
 @media (max-width: 700px){
-    #nav{
+    #mobilePage{
+        display: flex;
+    }
+    #mobileNav{
         width: 100vw;
-        background-color: rgba(255,255,255,0.6);
+        height: 75px;
+        background-color: rgb(255,255,255);
         color: #333;
-        align-content: initial;
-        justify-content: initial;
-        margin: 0;
-        padding: 0;
-    }
-    #contentBlock{
-        display: none;
-        margin: 0;
-        padding: 0;
-    }
-    #imageBlock{
-        z-index: -1;
         margin: 0;
         margin-left: -100vw;
-        width: 100vw;
-        padding: 0;
+        z-index: 2;
+        display: flex;
+        align-items: center;
     }
-    .navItem{
+    #mobileNavBlock{
         width: 100vw;
+        height: 325px;
+        background-color: #ddd;
+        margin-left: -95vw;
+        margin-top: 75px;
+        z-index: 10;
+        color: black;
+        display: none;
+    }
+    #mobileContentBlock{
+        display: flex;
+        width: 90vw;
+        height: 70vh;
+        margin-left: -95vw;
+        margin-top: 100px;
+        background-color: rgba(44, 44, 44, 0.5);
+        z-index: 4; 
+        font-family: monospace;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    #mobileImageBlock{
+        z-index: 0;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        background: url('/assets/img/DSC_0013.jpg') center / cover no-repeat, rgba(44,44,44,0);
+        filter: blur(17px) brightness(49%) grayscale(100%) hue-rotate(360deg) sepia(29%);
+    }
+    #mobileNavToggle{
+        width: 20vw;
+        height: 75px;
+        background-color: #ddd;
         margin: 0;
         padding: 0;
+        color: black;
+        font-size: 20pt;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-    .navItem p i{
-        padding-left: 10px;
+    .mobileNavItem{
+        width: 100vw;
+        height: 25px;
+        font-family: monospace;
+        font-size: 15px;
+        margin-top: -10px;
+    }
+    .mobileNavItem p i{
+        margin-left: 10px;
+        margin-top: 4.5px;
+    }
+    .mobileNavItem:hover{
+        color: white;
+        background-color: black;
+    }
+    #mobileName{
+        width: 80vw;
+        height: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        font-family: monospace;
+    }
+    #deskPage{
+        display: none;
     }
 }

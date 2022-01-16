@@ -8,40 +8,82 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <div id="page">
-        <div id="nav">
+    <div id="deskPage">
+        <div id="deskNav">
             <h1 style="margin-left: 10px;"><b><u>ANDEN WIESELER</u></b></h1>
             <h3 style="margin-left: 10px;"><b><u>MY STUFF:</u></b></h3>
-            <div class="navItem" onclick="setPage('aboutMe')">
+            <div class="deskNavItem" onclick="setPage('aboutMe')">
                 <p><i class="fas fa-book"></i> About Me</p>
             </div>
-            <div class="navItem" onclick="setPage('github')">
+            <div class="deskNavItem" onclick="setPage('github')">
                 <p><i class="fab fa-github"></i> GitHub</p>
             </div>
-            <div class="navItem" onclick="setPage('twitter')">
+            <div class="deskNavItem" onclick="setPage('twitter')">
                 <p><i class="fab fa-twitter"></i> Twitter</p>
             </div>
-            <div class="navItem" onclick="setPage('zedtekFacebook')">
+            <div class="deskNavItem" onclick="setPage('zedtekFacebook')">
                 <p><i class="fab fa-facebook"></i> ZedTek Facebook</p>
             </div>
             <h3 style="margin-left: 10px;"><b><u>MY PROJECTS:</u></b></h3>
-            <div class="navItem smalltext" onclick="setPage('jbWalkthrough')">
+            <div class="deskNavItem smalltext" onclick="setPage('jbWalkthrough')">
                 <p><i class="fas fa-bars"></i> Jailbreak Walkthrough</p>
             </div>
-            <div class="navItem smalltext" onclick="setPage('toggle')">
+            <div class="deskNavItem smalltext" onclick="setPage('toggle')">
                 <p><i class="fas fa-bars"></i> Toggle Bot Framework</p>
             </div>
-            <div class="navItem smalltext" onclick="setPage('portfolio')">
+            <div class="deskNavItem smalltext" onclick="setPage('portfolio')">
                 <p><i class="fas fa-bars"></i> Freelance Graphic/Web Design</p>
             </div>
-            <div class="navItem smalltext" onclick="setPage('photos')">
+            <div class="deskNavItem smalltext" onclick="setPage('photos')">
                 <p><i class="fas fa-bars"></i> Photography</p>
             </div>
         </div>
-        <div id="imageBlock"></div>
-        <div id="contentBlock">
+        <div id="deskImageBlock"></div>
+        <div id="deskContentBlock">
             <h1>ANDEN WIESELER</h1>
             <p><i class="fas fa-arrow-left"></i> Click a link in the sidebar!</p>
+        </div>
+    </div>
+    <div id="mobilePage">
+        <div id="mobileImageBlock"></div>
+        <div id="mobileNav">
+            <div id="mobileNavToggle" class="fas fa-bars">
+            </div>
+            <div id="mobileName">
+                <h1>ANDEN WIESELER</h1>
+            </div>
+        </div>
+        <div id="mobileContentBlock">
+            <h1>Anden Wieseler</h1>
+            <p>(click a link in the navigation pane)</p>
+        </div>
+        <div id="mobileNavBlock">
+            <h3 style="margin-left: 10px; font-family: monospace;"><b><u>MY STUFF:</u></b></h3>
+            <div class="mobileNavItem" onclick="setPage('aboutMe')">
+                <p><i class="fas fa-book"></i> About Me</p>
+            </div>
+            <div class="mobileNavItem" onclick="setPage('github')">
+                <p><i class="fab fa-github"></i> GitHub</p>
+            </div>
+            <div class="mobileNavItem" onclick="setPage('twitter')">
+                <p><i class="fab fa-twitter"></i> Twitter</p>
+            </div>
+            <div class="mobileNavItem" onclick="setPage('zedtekFacebook')">
+                <p><i class="fab fa-facebook"></i> ZedTek Facebook</p>
+            </div>
+            <h3 style="margin-left: 10px; font-family: monospace;"><b><u>MY PROJECTS:</u></b></h3>
+            <div class="mobileNavItem" onclick="setPage('jbWalkthrough')">
+                <p><i class="fas fa-bars"></i> Jailbreak Walkthrough</p>
+            </div>
+            <div class="mobileNavItem" onclick="setPage('toggle')">
+                <p><i class="fas fa-bars"></i> Toggle Bot Framework</p>
+            </div>
+            <div class="mobileNavItem" onclick="setPage('portfolio')">
+                <p><i class="fas fa-bars"></i> Freelance Graphic/Web Design</p>
+            </div>
+            <div class="mobileNavItem" onclick="setPage('photos')">
+                <p><i class="fas fa-bars"></i> Photography</p>
+            </div>
         </div>
     </div>
     <script src="https://kit.fontawesome.com/cd32c1b6c9.js" crossorigin="anonymous"></script>
