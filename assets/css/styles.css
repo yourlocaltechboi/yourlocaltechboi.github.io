@@ -5,7 +5,6 @@ body{
     padding: 0;
     background-color: black;
     color: white;
-    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
     height: calc(var(--vh) * 100);
 }
 #smallScreenWarning{
