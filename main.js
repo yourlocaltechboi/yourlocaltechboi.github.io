@@ -128,6 +128,10 @@ window.addEventListener("resize", () => {
     setViewportHeightReal()
 })
 
+window.addEventListener("rotate", () => {
+    setViewportHeightReal()
+})
+
 if (mobileContentBlock.innerHTML == ''){
     setMobileContentBlock(false)
     setBlur(false)
