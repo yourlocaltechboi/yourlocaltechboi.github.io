@@ -53,7 +53,7 @@ body{
     width: 80vw;
     height: 100vh;
     margin: 0;
-    background: url('/assets/img/DSC_0013.jpg') center / cover no-repeat, rgba(0,0,0,1);
+    background: url('/assets/img/Anden-51.jpg') center / cover no-repeat, rgba(0,0,0,1);
     filter: blur(17px) brightness(49%) grayscale(100%) hue-rotate(360deg) sepia(29%);
 }
 #name{
@@ -99,6 +99,30 @@ body{
     #deskImageBlock{
         width: 70%;
     }
+    @media (max-height: 600px){
+        body{
+            background-color: white;
+            height: calc(var(--vh) * 100);
+            overflow: hidden
+        }
+        #deskPage{
+            display: none;
+        }
+        #mobilePage{
+            display: none;
+        }
+        #smallScreenWarning{
+            display: initial;
+            color: black;
+            width: 100vw;
+            height: calc(var(--vh) * 100);
+            font-family: monospace;
+        }
+        #smallScreenWarning h1{
+            width: 100vw;
+            margin: 10% auto;
+        }
+    }
 }
 @media (max-width: 1000px) {
     #deskNav{
@@ -110,6 +134,30 @@ body{
     }
     #deskImageBlock{
         width: 60%;
+    }
+    @media (max-height: 600px) {
+        body{
+            background-color: white;
+            height: calc(var(--vh) * 100);
+            overflow: hidden
+        }
+        #deskPage{
+            display: none;
+        }
+        #mobilePage{
+            display: none;
+        }
+        #smallScreenWarning{
+            display: initial;
+            color: black;
+            width: 100vw;
+            height: calc(var(--vh) * 100);
+            font-family: monospace;
+        }
+        #smallScreenWarning h1{
+            width: 100vw;
+            margin: 10% auto;
+        }
     }
 }
 @media (max-width: 700px){
