@@ -86,7 +86,7 @@ mobileNavButton.addEventListener("click", () => {
 })
 
 mobileNameBlock.addEventListener("click", () => {
-    mobileContentBlock.innerHTML = '<h1>Anden Wieseler</h1><p>(click a link in the navigation pane)</p>'
+    mobileContentBlock.innerHTML = '<h1>Anden Wieseler</h1><p style="text-align: center;">(click a link in the navigation pane)</p>'
     setBlur(false)
 })
 
