@@ -164,31 +164,35 @@ body{
         display: flex;
     }
     #mobileNav{
-        width: 100vw;
-        height: 75px;
+        width: 90vw;
+        height: 55px;
         background-color: rgba(255, 255, 255, 0.3);
         color: #333;
         margin: 0;
-        margin-left: -100vw;
+        margin-top: 20px;
+        margin-left: -95vw;
         z-index: 2;
         display: flex;
         align-items: center;
+        border-radius: 25px;
     }
     #mobileNavBlock{
-        width: 100vw;
+        width: 90vw;
         height: 325px;
         background-color: #fff;
-        margin-left: -100vw;
+        margin-left: -90vw;
         margin-top: 75px;
         z-index: 10;
         color: black;
         display: none;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
     }
     #mobileContentBlock{
         display: flex;
         width: 90vw;
         height: calc((var(--vh) * 100) - 125px);
-        margin-left: -95vw;
+        margin-left: -90vw;
         margin-top: 100px;
         background-color: rgba(255, 255, 255, 0.5);
         z-index: 4; 
@@ -197,6 +201,7 @@ body{
         text-align: center;
         overflow: scroll;
         color: black;
+        border-radius: 25px;
     }
     #mobileContentBlock h1{
         margin-top: 50px;
@@ -212,29 +217,32 @@ body{
         height: calc(var(--vh) * 100);
         margin: 0;
         background: url('/assets/img/Anden-51.jpg') center / cover no-repeat;
-        filter: blur(2px)
+        filter: blur(2px) brightness(75%)
     }
     #mobileNavToggle{
         width: 20vw;
-        height: 75px;
+        height: 55px;
         margin: 0;
         padding: 0;
         color: black;
         font-size: 20pt;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         background-color: #fff;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        padding-left: 25px;
     }
     .mobileNavItem{
-        width: 100vw;
+        width: 90vw;
         height: 25px;
         font-family: monospace;
         font-size: 15px;
         margin-top: -10px;
     }
     .mobileNavItem p i{
-        margin-left: 10px;
+        margin-left: 25px;
         margin-top: 4.5px;
     }
     .mobileNavItem:hover{
@@ -243,13 +251,16 @@ body{
     }
     #mobileName{
         width: 80vw;
-        height: 75px;
+        height: 55px;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-end;
+        padding-right: 25px;
         color: black;
         font-family: monospace;
         background-color: rgba(255, 255, 255, 0.6);
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
     }
     #deskPage{
         display: none;

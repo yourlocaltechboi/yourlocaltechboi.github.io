@@ -11,21 +11,25 @@ function setNav(status){
         mobileNavButton.classList.add('fa-close')
         mobileNavBlock.style.display = 'initial'
         mobileNameBlock.style.backgroundColor = '#fff'
+        mobileNavButton.style.borderBottomLeftRadius = '0'
+        mobileNameBlock.style.borderBottomRightRadius = '0'
     }
     else if (status == false){
         mobileNavButton.classList.remove('fa-close')
         mobileNavButton.classList.add('fa-bars')
         mobileNavBlock.style.display = 'none'
         mobileNameBlock.style.backgroundColor = 'rgba(255, 255, 255, 0.6)'
+        mobileNavButton.style.borderBottomLeftRadius = '25px'
+        mobileNameBlock.style.borderBottomRightRadius = '25px'
     }
 }
 
 function setBlur(status){
     if (status == true){
-        mobileImageBlock.style.filter = 'blur(17px) hue-rotate(360deg) sepia(29%)'
+        mobileImageBlock.style.filter = 'blur(17px) brightness(75%)'
     }
     else if (status == false){
-        mobileImageBlock.style.filter = 'blur(2px)'
+        mobileImageBlock.style.filter = 'blur(2px) brightness(75%)'
     }
 }
 
