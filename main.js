@@ -95,6 +95,12 @@ mobileNameBlock.addEventListener("click", () => {
     setNav(false)
 })
 
+mobileContentBlock.addEventListener("click", () => {
+    if (mobileNavBlock.style.display == 'initial'){
+        setNav(false)
+    }
+})
+
 window.addEventListener("resize", () => {
     setViewportHeightReal()
 })
