@@ -57,8 +57,9 @@ function setPage(page){
         setNav(false)
         setBlur(true)
         setMobileContentBlock(true)
-        contentBlock.innerHTML = '<h1><u>ABOUT ME</u></h1><p>Hi! My name is Anden Wieseler, and I like to make things.</p><p>I make websites and software, and I\'m fluent in HTML, CSS, JavaScript, and Python. I\'m currently also learning Swift.</p><p>I spend my free time outside of work coding, designing, taking photos, playing Minecraft, and listening to my endlessly long Apple Music playlists (my longest is over 700 songs xD).</p><br><p><b>Currently, I\'m working on the following projects:</b></p><p><b>Jailbreak Walkthrough - </b>This is a web-based walkthrough for jailbreaking iPhones and iPads!</p><p><b>Toggle - </b>Toggle is a modern Discord bot framework built using discord.js, and supports the creation of bots using both code and third-party modules!</p><p><b>Freelance Graphic/Web Design - </b>I love to work on web and graphic design projects in my free time!</p><br><br><p style="text-align: center;"><b>Check out my design and photo portfolios as well as my other projects in the navigation pane!</b></p>'
+        contentBlock.innerHTML = `<div parsefile="subpages/${page}-content.html"></div>`
         mobileContentBlock.innerHTML = contentBlock.innerHTML
+        parseHTML()
     }
     if (page == 'github'){
         setNav(false)
@@ -87,6 +88,9 @@ function setPage(page){
         setMobileContentBlock(true)
         mobileContentBlock.innerHTML = '<h1><u>MY WORK</u></h1>'
         contentBlock.innerHTML = '<h1><u>MY WORK</u></h1>'
+        contentBlock.innerHTML = `<div parsefile="subpages/${page}-content.html"></div>`
+        mobileContentBlock.innerHTML = contentBlock.innerHTML
+        parseHTML()
     }
     if (page == 'photos'){
         setNav(false)
@@ -94,6 +98,9 @@ function setPage(page){
         setMobileContentBlock(true)
         mobileContentBlock.innerHTML = '<h1><u>MY PHOTOS</u></h1>'
         contentBlock.innerHTML = '<h1><u>MY PHOTOS</u></h1>'
+        contentBlock.innerHTML = `<div parsefile="subpages/${page}-content.html"></div>`
+        mobileContentBlock.innerHTML = contentBlock.innerHTML
+        parseHTML()
     }
 }
 
