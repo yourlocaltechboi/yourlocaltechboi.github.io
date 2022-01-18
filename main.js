@@ -6,6 +6,15 @@ const imageBlock = document.querySelector('#deskImageBlock')
 const mobileNameBlock = document.querySelector('#mobileName')
 const nameBlock = document.querySelector('#deskName')
 const contentBlock = document.querySelector('#deskContentBlock')
+const bgNum = Math.random(1, 6)
+const randomImages = {
+    1: '1.jpg',
+    2: '2.jpg',
+    3: '3.jpg',
+    4: '4.jpg',
+    5: '5.jpg',
+    6: ''
+}
 
 function setNav(status){
     if (status == true){
@@ -96,6 +105,10 @@ function setPage(page){
     }
 }
 
+function setWallpaper(){
+    imageBlock.style.backgroundImage = `url('assets/img/${randomImages.bgNum.assetFileName})`
+}
+
 mobileNavButton.addEventListener("click", () => {
     if (mobileNavButton.classList.contains('fa-bars')){
         setNav(true)
@@ -138,3 +151,5 @@ if (mobileContentBlock.innerHTML == ''){
 }
 
 setViewportHeightReal()
+
+document.onload(setPicture());
