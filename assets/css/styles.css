@@ -5,15 +5,22 @@ body{
     padding: 0;
     background-color: black;
     color: white;
+    height: calc(var(--vh) * 100);
 }
-#page{
+#smallScreenWarning{
+    display: none;
+}
+#mobilePage{
+    display: none;
+}
+#deskPage{
     width: 100vw;
     height: 100vh;
     margin: 0;
     padding: 0;
     display: flex;
 }
-#nav{
+#deskNav{
     width: 20%;
     height: 100%;
     background-color: white;
@@ -26,27 +33,27 @@ body{
     font-family: monospace;
     font-size: 20px;
 }
-.navItem{
+.deskNavItem{
     width: 100%;
     height: 50px;
     padding-left: 10px;
     user-select: none;
 }
-.navItem p{
+.deskNavItem p{
     height: 20px;
     margin-top: 15px;
 }
-.navItem:hover{
+.deskNavItem:hover{
     color: white;
     background-color: black;
 }
-#imageBlock{
+#deskImageBlock{
     z-index: 1;
     width: 80vw;
     height: 100vh;
     margin: 0;
-    background: url('/assets/img/DSC_0013.jpg') center / cover no-repeat, rgba(44,44,44,0);
-    filter: blur(17px) brightness(49%) grayscale(100%) hue-rotate(360deg) sepia(29%);
+    background: url('/assets/img/Anden-51.jpg') center / cover no-repeat, rgba(0,0,0,1);
+    filter: blur(0px) brightness(75%);
 }
 #name{
     z-index: 2;
@@ -62,65 +69,234 @@ body{
 .smalltext p{
     margin-top: 7.5px;
 }
-#contentBlock{
+#deskContentBlock{
     z-index: 3;
     margin-left: -80vw;
-    width: 80vw;
+    width: 40vw;
     height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: left;
     justify-content: center;
     font-family: monospace;
     flex-direction: column;
 }
-#contentBlock h1{
+#deskContentBlock h1{
     font-size: 40px;
+    margin-left: 25px
 }
-#contentBlock p{
+#deskContentBlock p{
     font-size: 16px;
+    margin: 10px 25px;
 }
 
 @media (max-width: 1400px) {
-    #nav{
+    #deskNav{
         width: 30%;
     }
-    #contentBlock{
+    #deskContentBlock{
         width: 70%;
         margin-left: -70vw;
     }
-    #imageBlock{
+    #deskImageBlock{
         width: 70%;
+    }
+    @media (max-height: 600px){
+        body{
+            background-color: white;
+            height: calc(var(--vh) * 100);
+            overflow: hidden
+        }
+        #deskPage{
+            display: none;
+        }
+        #mobilePage{
+            display: none;
+        }
+        #smallScreenWarning{
+            display: initial;
+            color: black;
+            width: 100vw;
+            height: calc(var(--vh) * 100);
+            font-family: monospace;
+        }
+        #smallScreenWarning h1{
+            width: 100vw;
+            margin: 10% auto;
+        }
+    }
+}
+@media (max-width: 1000px) {
+    #deskNav{
+        width: 40%;
+    }
+    #deskContentBlock{
+        width: 60%;
+        margin-left: -60vw;
+    }
+    #deskImageBlock{
+        width: 60%;
+    }
+    @media (max-height: 600px) {
+        body{
+            background-color: white;
+            height: calc(var(--vh) * 100);
+            overflow: hidden
+        }
+        #deskPage{
+            display: none;
+        }
+        #mobilePage{
+            display: none;
+        }
+        #smallScreenWarning{
+            display: initial;
+            color: black;
+            width: 100vw;
+            height: calc(var(--vh) * 100);
+            font-family: monospace;
+        }
+        #smallScreenWarning h1{
+            width: 100vw;
+            margin: 10% auto;
+        }
     }
 }
 @media (max-width: 700px){
-    #nav{
-        width: 100vw;
-        background-color: rgba(255,255,255,0.6);
+    #mobilePage{
+        display: flex;
+    }
+    #mobileNav{
+        width: 90vw;
+        height: 55px;
+        background-color: rgba(255, 255, 255, 0.3);
         color: #333;
-        align-content: initial;
-        justify-content: initial;
         margin: 0;
-        padding: 0;
+        margin-top: 20px;
+        margin-left: -95vw;
         z-index: 2;
+        display: flex;
+        align-items: center;
+        border-radius: 25px;
     }
-    #contentBlock{
+    #mobileNavBlock{
+        width: 90vw;
+        height: 325px;
+        background-color: #fff;
+        margin-left: -90vw;
+        margin-top: 75px;
+        z-index: 10;
+        color: black;
         display: none;
-        margin: 0;
-        padding: 0;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
     }
-    #imageBlock{
-        z-index: 1;
-        margin: 0;
-        margin-left: -100vw;
+    #mobileContentBlock{
+        display: flex;
+        width: 90vw;
+        height: calc((var(--vh) * 100) - 125px);
+        margin-left: -90vw;
+        margin-top: 100px;
+        background-color: rgba(255, 255, 255, 0.5);
+        z-index: 4; 
+        font-family: monospace;
+        flex-direction: column;
+        text-align: center;
+        overflow: scroll;
+        color: black;
+        border-radius: 25px;
+    }
+    #mobileContentBlock h1{
+        margin-top: 50px;
+    }
+    #mobileContentBlock p{
+        margin-left: 15px;
+        margin-right: 15px;
+        text-align: left;
+    }
+    #mobileImageBlock{
+        z-index: 0;
         width: 100vw;
-        padding: 0;
+        height: calc(var(--vh) * 100);
+        margin: 0;
+        background: url('/assets/img/Anden-51.jpg') center / cover no-repeat;
+        filter: blur(2px) brightness(75%)
     }
-    .navItem{
-        width: 100vw;
+    #mobileNavToggle{
+        width: 20vw;
+        height: 55px;
         margin: 0;
         padding: 0;
+        color: black;
+        font-size: 20pt;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: #fff;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        padding-left: 25px;
     }
-    .navItem p i{
-        padding-left: 10px;
+    .mobileNavItem{
+        width: 90vw;
+        height: 25px;
+        font-family: monospace;
+        font-size: 15px;
+        margin-top: -10px;
+    }
+    .mobileNavItem p i{
+        margin-left: 25px;
+        margin-top: 4.5px;
+    }
+    .mobileNavItem:hover{
+        color: white;
+        background-color: black;
+    }
+    #mobileName{
+        width: 80vw;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 25px;
+        color: black;
+        font-family: monospace;
+        background-color: rgba(255, 255, 255, 0.6);
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+    #deskPage{
+        display: none;
+    }
+    @media (max-width: 400px){
+        #mobileNav{
+            font-size: 10px;
+        }
+        #mobileNavToggle{
+            font-size: 18px;
+        }
+    }
+}
+@media (max-height: 400px){
+    body{
+        background-color: white;
+        height: calc(var(--vh) * 100);
+        overflow: hidden
+    }
+    #deskPage{
+        display: none;
+    }
+    #mobilePage{
+        display: none;
+    }
+    #smallScreenWarning{
+        display: initial;
+        color: black;
+        width: 100vw;
+        height: calc(var(--vh) * 100);
+        font-family: monospace;
+    }
+    #smallScreenWarning h1{
+        width: 100vw;
+        margin: 10% auto;
     }
 }
