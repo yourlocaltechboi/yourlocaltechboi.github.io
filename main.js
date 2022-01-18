@@ -16,9 +16,10 @@ function show(item){
 function setPage(page){
     if (page == 'aboutMe'){
         if (document.documentElement.clientWidth <= 700){
-            hide(navWindow);
+            hide(navWindow)
+            show(contentWindow)
         }
-        contentWindow.innerHTML = 
+        contentWindow.innerHTML = '<h1>Anden Wieseler About</h1>'
     }
     if (page == 'github'){
         window.location.href = 'http://github.yltboi.me'
