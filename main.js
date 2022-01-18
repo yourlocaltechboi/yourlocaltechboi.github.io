@@ -6,15 +6,7 @@ const imageBlock = document.querySelector('#deskImageBlock')
 const mobileNameBlock = document.querySelector('#mobileName')
 const nameBlock = document.querySelector('#deskName')
 const contentBlock = document.querySelector('#deskContentBlock')
-const bgNum = Math.random(1, 6)
-const randomImages = {
-    1: '1.jpg',
-    2: '2.jpg',
-    3: '3.jpg',
-    4: '4.jpg',
-    5: '5.jpg',
-    6: ''
-}
+const randomImages = ['assets/img/1.jpg', 'assets/img/2.jpg', 'assets/img/3.jpg', 'assets/img/4.jpg', 'assets/img/5.jpg', 'assets/img/6.jpg']
 
 function setNav(status){
     if (status == true){
@@ -106,7 +98,8 @@ function setPage(page){
 }
 
 function setWallpaper(){
-    imageBlock.style.backgroundImage = `url('assets/img/${randomImages.bgNum.assetFileName})`
+    imageBlock.style.background = `url('${randomImages[Math.floor(Math.random() * 6)]}') center / cover no-repeat, rgb(0, 0, 0, 1)`
+    mobileImageBlock.style.background = `url('${randomImages[Math.floor(Math.random() * 6)]}') center / cover no-repeat, rgb(0, 0, 0, 1)`
 }
 
 mobileNavButton.addEventListener("click", () => {
@@ -152,4 +145,4 @@ if (mobileContentBlock.innerHTML == ''){
 
 setViewportHeightReal()
 
-document.onload(setPicture());
+document.onload(setWallpaper());
