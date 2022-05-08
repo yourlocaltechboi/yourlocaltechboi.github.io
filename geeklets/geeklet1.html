@@ -33,7 +33,7 @@
         let dateDayValue = date.getDay()
         let dateMonthValue = date.getMonth()
         let dateNumValue = date.getDate()
-        dateTime.innerText = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+        dateTime.innerText = date.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })
 
         dateNum.innerText = dateNumValue
 
