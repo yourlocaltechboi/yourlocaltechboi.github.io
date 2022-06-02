@@ -82,6 +82,10 @@ function setPage(page){
         alert("Toggle Bot Framework site coming soon!")
         // window.location.href = 'https://zedtek.yltboi.me/toggle'
     }
+    if (page == 'toggle'){
+        setNav(false)
+        window.location.href = 'https://mc.yltboi.me'
+    }
     if (page == 'portfolio'){
         setNav(false)
         setBlur(true)
